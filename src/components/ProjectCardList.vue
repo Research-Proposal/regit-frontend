@@ -7,16 +7,18 @@
             {{ project.title }} by
             {{ project.owner }}
           </v-card-title>
-          <v-card-subtitle>
-            Date: {{project.created_at}}
-          </v-card-subtitle>
+          <v-card-subtitle> Date: {{ project.created_at }} </v-card-subtitle>
         </v-card-item>
         <v-card-text>
           Description: {{ project.description }}
           <div>
             Contributors:
-            <span v-for="(contributor, index) in project.contributors" :key="index">
-              {{ contributor }}<span v-if="index < project.contributors.length - 1">, </span>
+            <span
+              v-for="(contributor, index) in project.contributors"
+              :key="index"
+            >
+              {{ contributor
+              }}<span v-if="index < project.contributors.length - 1">, </span>
             </span>
           </div>
         </v-card-text>
@@ -40,9 +42,10 @@ export default {
         },
         {
           title: "Shopping map app",
-          description: "University swp course project \n" +
-              "Mansur was shocked \n" +
-              "YYYYYYYYYEEEEEEEEEEEEEeeeeeeaaaaaah",
+          description:
+            "University swp course project \n" +
+            "Mansur was shocked \n" +
+            "YYYYYYYYYEEEEEEEEEEEEEeeeeeeaaaaaah",
           owner: "@Mansur",
           contributors: ["@Sergey", "@Vadim", "@Vazir", "@Nastya"],
           created_at: "20.03.24",
