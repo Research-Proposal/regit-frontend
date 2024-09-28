@@ -1,15 +1,13 @@
 <script setup>
 import { ref, computed } from "vue";
-import Dashboard from "./components/Dashboard.vue";
 import Projects from "./components/Projects.vue";
 import Tasks from "./components/Tasks.vue";
 import Account from "./components/Account.vue";
 
 const routes = {
-  "/": Dashboard,
+  "/": Account,
   "/projects": Projects,
-  "/tasks": Tasks,
-  "/account": Account,
+  "/tasks": Tasks
 };
 
 const currentPath = ref(window.location.hash);
@@ -29,15 +27,8 @@ const currentView = computed(() => {
       <a href="#/">
         <v-list-item
           link
-          title="DASHBOARD"
-          prepend-icon="mdi-view-dashboard"
-        ></v-list-item>
-      </a>
-      <a href="#/projects">
-        <v-list-item
-          link
-          title="PROJECTS"
-          prepend-icon="mdi-folder"
+          title="ACCOUNT"
+          prepend-icon="mdi-account-box"
         ></v-list-item>
       </a>
       <a href="#/tasks">
@@ -47,11 +38,11 @@ const currentView = computed(() => {
           prepend-icon="mdi-bookmark-multiple"
         ></v-list-item>
       </a>
-      <a href="#/account">
+      <a href="#/projects">
         <v-list-item
           link
-          title="ACCOUNT"
-          prepend-icon="mdi-account-box"
+          title="PROJECTS"
+          prepend-icon="mdi-folder"
         ></v-list-item>
       </a>
     </v-navigation-drawer>
@@ -59,15 +50,15 @@ const currentView = computed(() => {
     <v-app-bar>
       <v-col cols="8" md="2">
         <v-text-field
-        :loading="loading"
-        append-inner-icon="mdi-magnify"
-        density="compact"
-        label="Search"
-        variant="solo"
-        hide-details
-        single-line
-        @click:append-inner="onClick"
-      ></v-text-field>
+          :loading="loading"
+          append-inner-icon="mdi-magnify"
+          density="compact"
+          label="Search"
+          variant="solo"
+          hide-details
+          single-line
+          @click:append-inner="onClick"
+        ></v-text-field>
       </v-col>
     </v-app-bar>
 
@@ -80,4 +71,3 @@ const currentView = computed(() => {
 </template>
 
 <style scoped></style>
-
