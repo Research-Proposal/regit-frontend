@@ -57,20 +57,17 @@ const currentView = computed(() => {
     </v-navigation-drawer>
 
     <v-app-bar>
-      <v-col cols="10" md="2" sm="4">
+      <v-col cols="8" md="2">
         <v-text-field
-            v-model.trim="searchText"
-            dense
-            filled
-            rounded
-            clearable
-            placeholder="Search"
-            prepend-inner-icon="mdi-magnify"
-            class="pt-6 shrink expanding-search"
-            :class="{ closed: searchBoxClosed && !searchText }"
-            @focus="searchBoxClosed = false"
-            @blur="searchBoxClosed = true"
-        ></v-text-field>
+        :loading="loading"
+        append-inner-icon="mdi-magnify"
+        density="compact"
+        label="Search"
+        variant="solo"
+        hide-details
+        single-line
+        @click:append-inner="onClick"
+      ></v-text-field>
       </v-col>
     </v-app-bar>
 
