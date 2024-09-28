@@ -1,6 +1,6 @@
 <template>
   <h1>My Tasks</h1>
-  <v-divider></v-divider>
+  <v-divider class="divider"></v-divider>
 
   <v-list>
     <v-list-item>
@@ -45,4 +45,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  .divider {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+</style>
