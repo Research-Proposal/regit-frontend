@@ -44,7 +44,7 @@ const currentView = computed(() => {
         <v-list-item
           link
           title="TASKS"
-          prepend-icon="mdi-folder"
+          prepend-icon="mdi-bookmark-multiple"
         ></v-list-item>
       </a>
       <a href="#/account">
