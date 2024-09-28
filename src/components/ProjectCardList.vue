@@ -1,18 +1,18 @@
 <template>
   <ol>
     <li v-for="project in projects" :key="project.title">
-      <v-card class="mx-auto my-8" elevation="16" max-width="344">
+      <v-card class="mx-auto my-8" width="1024">
         <v-card-item>
           <v-card-title>
-            {{ project.title }}
+            {{ project.title }} by
             {{ project.owner }}
           </v-card-title>
           <v-card-subtitle>
-            Card subtitle secondary text
+            Date: {{project.created_at}}
           </v-card-subtitle>
         </v-card-item>
         <v-card-text>
-          {{ project.description }}
+          Description: {{ project.description }}
           <div>
             Contributors:
             <span v-for="(contributor, index) in project.contributors" :key="index">
@@ -35,15 +35,17 @@ export default {
           description: "The greatest project",
           owner: "@Vazir",
           contributors: ["@Sergey", "@Vadim", "@Amir", "@Nastya"],
-          created_at: Date(8.64e15),
+          created_at: "28.09.24",
           tasks: ["task1", "task2", "task3", "task4"],
         },
         {
           title: "Shopping map app",
-          description: "University swp course project",
+          description: "University swp course project \n" +
+              "Mansur was shocked \n" +
+              "YYYYYYYYYEEEEEEEEEEEEEeeeeeeaaaaaah",
           owner: "@Mansur",
           contributors: ["@Sergey", "@Vadim", "@Vazir", "@Nastya"],
-          created_at: Date(8.63e15),
+          created_at: "20.03.24",
           tasks: ["task1", "task2"],
         },
         {
@@ -51,7 +53,7 @@ export default {
           description: "Shop bot",
           owner: "@Sergey",
           contributors: ["@Max", "@Lev"],
-          created_at: Date(8.64e12),
+          created_at: "20.08.24",
           tasks: ["task1", "task2"],
         },
       ],
