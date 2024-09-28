@@ -25,16 +25,47 @@ const currentView = computed(() => {
 
 <template>
 
-  <header></header>
+  <v-app>
+    <v-navigation-drawer>
+      <v-list-item 
+      link
+      title="Dashboard"
+      prepend-icon="mdi-view-dashboard"
+      ></v-list-item>
+      <v-list-item 
+      link
+      title="Projects"
+      prepend-icon="mdi-folder"
+      ></v-list-item>
+      <v-list-item 
+      link
+      title="My Tasks"
+      prepend-icon="mdi-folder"
+      ></v-list-item>
+      <v-list-item 
+      link
+      title="Account"
+      prepend-icon="mdi-account-box"
+      ></v-list-item>
+    </v-navigation-drawer>
 
-  <a href="#/">Dashboard</a> |
+    <v-app-bar title="App bar"></v-app-bar>
+
+    <v-main>
+      <v-container>
+        <h1>Main Content</h1>
+      </v-container>
+    </v-main>
+
+  </v-app>
+
+  <!-- <a href="#/">Dashboard</a> |
   <a href="#/projects">Projects</a> |
   <a href="#/tasks">My Tasks</a> |
-  <a href="#/settings">Settings</a> |
+  <a href="#/settings">Settings</a> | -->
+
   <component :is="currentView" />
-
-  <main></main>
-
+  
 </template>
 
 <style scoped></style>
