@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ol>
     <li v-for="project in projects" :key="project.title">
       <v-card class="mx-auto my-8" elevation="16" max-width="344">
         <v-card-item>
@@ -22,7 +22,7 @@
         </v-card-text>
       </v-card>
     </li>
-  </ul>
+  </ol>
 </template>
 
 <script>
@@ -60,4 +60,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+ol {
+  list-style-type: none;
+}
+</style>
