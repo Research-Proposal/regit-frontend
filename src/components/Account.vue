@@ -26,7 +26,7 @@
 
     <v-col cols="4">
       <v-card-subtitle>
-        <h3>Bio:</h3>
+        <h2>Bio:</h2>
       </v-card-subtitle>
 
       <v-list>
@@ -34,9 +34,11 @@
       </v-list>
     </v-col>
 
+    <v-divider class="divider"></v-divider>
+
     <v-col cols="4">
       <v-card-subtitle>
-        <h3>Projects:</h3>
+        <h2>Projects:</h2>
       </v-card-subtitle>
       
       <v-list>
