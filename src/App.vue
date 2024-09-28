@@ -29,34 +29,50 @@ const currentView = computed(() => {
       <a href="#/">
         <v-list-item
           link
-          title="Dashboard"
+          title="DASHBOARD"
           prepend-icon="mdi-view-dashboard"
         ></v-list-item>
       </a>
       <a href="#/projects">
         <v-list-item
           link
-          title="Projects"
+          title="PROJECTS"
           prepend-icon="mdi-folder"
         ></v-list-item>
       </a>
       <a href="#/tasks">
         <v-list-item
           link
-          title="My Tasks"
+          title="TASKS"
           prepend-icon="mdi-folder"
         ></v-list-item>
       </a>
       <a href="#/account">
         <v-list-item
           link
-          title="Account"
+          title="ACCOUNT"
           prepend-icon="mdi-account-box"
         ></v-list-item>
       </a>
     </v-navigation-drawer>
 
-    <v-app-bar title="App bar"></v-app-bar>
+    <v-app-bar>
+      <v-col cols="10" md="2" sm="4">
+        <v-text-field
+            v-model.trim="searchText"
+            dense
+            filled
+            rounded
+            clearable
+            placeholder="Search"
+            prepend-inner-icon="mdi-magnify"
+            class="pt-6 shrink expanding-search"
+            :class="{ closed: searchBoxClosed && !searchText }"
+            @focus="searchBoxClosed = false"
+            @blur="searchBoxClosed = true"
+        ></v-text-field>
+      </v-col>
+    </v-app-bar>
 
     <v-main>
       <v-container>
@@ -68,6 +84,12 @@ const currentView = computed(() => {
 
 <style scoped>
 a {
-  color: darkorange;
+  color: gray;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darkorange; 
 }
 </style>
+
