@@ -1,9 +1,9 @@
 <script setup>
 import { ref, computed } from "vue";
-import Dashboard from "./Dashboard.vue";
-import Projects from "./Projects.vue";
-import Tasks from "./Tasks.vue";
-import Account from "./Account.vue";
+import Dashboard from "./components/Dashboard.vue";
+import Projects from "./components/Projects.vue";
+import Tasks from "./components/Tasks.vue";
+import Account from "./components/Account.vue";
 
 const routes = {
   "/": Dashboard,
@@ -79,14 +79,5 @@ const currentView = computed(() => {
   </v-app>
 </template>
 
-<style scoped>
-a {
-  color: gray;
-  text-decoration: none;
-}
-
-a:hover {
-  color: darkorange; 
-}
-</style>
+<style scoped></style>
 
