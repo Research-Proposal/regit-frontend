@@ -24,6 +24,9 @@ const currentView = computed(() => {
 <template>
   <v-app>
     <v-navigation-drawer>
+      <div class="d-flex justify-center my-4">
+        <v-icon icon="mdi-shark-fin" size="40"></v-icon>
+      </div>
       <a href="#/">
         <v-list-item
           link
