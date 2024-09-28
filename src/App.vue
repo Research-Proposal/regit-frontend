@@ -22,33 +22,48 @@ const currentView = computed(() => {
 </script>
 
 <template>
+  
   <v-app>
-    <v-navigation-drawer>
-      <div class="d-flex justify-center my-4">
-        <v-icon icon="mdi-shark-fin" size="40"></v-icon>
-      </div>
-      <a href="#/">
-        <v-list-item
-          link
-          title="ACCOUNT"
-          prepend-icon="mdi-account-box"
-        ></v-list-item>
-      </a>
-      <a href="#/tasks">
-        <v-list-item
-          link
-          title="TASKS"
-          prepend-icon="mdi-bookmark-multiple"
-        ></v-list-item>
-      </a>
-      <a href="#/projects">
-        <v-list-item
-          link
-          title="PROJECTS"
-          prepend-icon="mdi-folder"
-        ></v-list-item>
-      </a>
-    </v-navigation-drawer>
+      <v-navigation-drawer location="left" permanent>
+        <div class="d-flex justify-center my-4">
+          <v-icon icon="mdi-shark-fin" size="40"></v-icon>
+        </div>
+          <v-list-item
+            lines="two"
+            prepend-icon="mdi-account"
+            subtitle="Log out"
+            title="Masha Spermochka"
+          ></v-list-item>
+
+        <v-divider></v-divider>
+
+        <v-list density="compact" nav>
+          <a href="#/">
+            <v-list-item
+              link
+              title="ACCOUNT"
+              value="Account"
+              prepend-icon="mdi-account-box"
+            ></v-list-item>
+          </a>
+          <a href="#/tasks">
+            <v-list-item
+              link
+              title="TASKS"
+              value="Tasks"
+              prepend-icon="mdi-bookmark-multiple"
+            ></v-list-item>
+          </a>
+          <a href="#/projects">
+            <v-list-item
+              link
+              title="PROJECTS"
+              value="Projects"
+              prepend-icon="mdi-folder"
+            ></v-list-item>
+          </a>
+            </v-list>
+      </v-navigation-drawer>
 
     <v-app-bar>
       <v-col cols="8" md="2">
