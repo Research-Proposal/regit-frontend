@@ -59,15 +59,15 @@ const currentView = computed(() => {
     <v-app-bar>
       <v-col cols="8" md="2">
         <v-text-field
-        :loading="loading"
-        append-inner-icon="mdi-magnify"
-        density="compact"
-        label="Search"
-        variant="solo"
-        hide-details
-        single-line
-        @click:append-inner="onClick"
-      ></v-text-field>
+          :loading="loading"
+          append-inner-icon="mdi-magnify"
+          density="compact"
+          label="Search"
+          variant="solo"
+          hide-details
+          single-line
+          @click:append-inner="onClick"
+        ></v-text-field>
       </v-col>
     </v-app-bar>
 
@@ -80,4 +80,3 @@ const currentView = computed(() => {
 </template>
 
 <style scoped></style>
-
