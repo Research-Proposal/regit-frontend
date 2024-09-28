@@ -13,9 +13,9 @@ export default {
 </script>
 
 <style>
-h1 {
-  font-weight: bold;
-  color: darkgray;
+.divider {
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 </style>
 
