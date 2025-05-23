@@ -1,7 +1,6 @@
 @import "./base.css";
 
 #app {
-  padding: 2rem;
   font-weight: normal;
 }
 
@@ -25,3 +24,4 @@ a {
 a:hover {
   color: darkorange;
 }
+
