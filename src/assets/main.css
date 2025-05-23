@@ -4,13 +4,6 @@
   font-weight: normal;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-}
-
 a {
   color: gray;
   text-decoration: none;
