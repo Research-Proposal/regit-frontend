@@ -11,6 +11,7 @@
         NOW
       </h1>
     </a>
+
     <v-responsive
         min-width="344"
         style="margin-bottom: 1vh; padding: 1vh"
