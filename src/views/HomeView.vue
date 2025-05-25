@@ -28,6 +28,7 @@
         variant="flat"
         size="x-large"
         base-color="#FF7F50FF"
+        to="/signup"
     >
       SIGN UP
     </v-btn>

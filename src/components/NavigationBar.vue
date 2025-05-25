@@ -32,13 +32,15 @@ onBeforeUnmount(() => {
       </v-app-bar-nav-icon>
       <span
           v-if="windowWidth >= 500">
-        ReGit
+        <a href="/">
+          ReGit
+        </a>
       </span>
     </v-app-bar-title>
-    <v-btn>
+    <v-btn to="/about">
       About
     </v-btn>
-    <v-btn>
+    <v-btn to="/login">
       Sign In
     </v-btn>
     <v-btn icon
