@@ -18,7 +18,7 @@
     >
       <v-text-field
           rounded="lg"
-          label="your email"
+          label="Enter your email"
           variant="outlined"
       >
       </v-text-field>

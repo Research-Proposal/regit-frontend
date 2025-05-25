@@ -14,7 +14,7 @@ import NavigationBar from "@/components/NavigationBar.vue";
 <style scoped>
 .v-main {
   padding-top: 10vh;
-  //width: 100vw;
+  /* width: 100vw; */
 }
 * {
   background-color: #f5f2ee;
